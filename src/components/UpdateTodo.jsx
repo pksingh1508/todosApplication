@@ -12,7 +12,7 @@ const UpdateTodo = () => {
 
     const submit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`http://localhost:4000/api/v1/updateTodo/${id}`, {
+        const response = await fetch(`${BASE_URL}/updateTodo/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ const UpdateTodo = () => {
       
       const getOneData = async () => {
         // console.log(id);
-        const response = await fetch(`http://localhost:4000/api/v1/getOneTodo/${id}`);
+        const response = await fetch(`${BASE_URL}/getOneTodo/${id}`);
         const result = await response.json();
         if(response.ok) {
             setTitle(result.title);
