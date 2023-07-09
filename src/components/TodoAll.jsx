@@ -8,7 +8,7 @@ const TodoAll = () => {
 
     const getAllTodos = async () => {
         setLoading(true);
-        const response = await fetch('http://localhost:4000/api/v1/getTodo',{
+        const response = await fetch(`${process.env.BASE_URL}/getTodo`,{
             method: 'GET',
         })
         const result = await response.json();
@@ -28,7 +28,7 @@ const TodoAll = () => {
     }, [])
 
     const deleteTodo = async (id) => {
-        const response = await fetch(`http://localhost:4000/api/v1/deleteTodo/${id}`,{
+        const response = await fetch(`${process.env.BASE_URL}/deleteTodo/${id}`,{
             method: 'DELETE',
         })
 
