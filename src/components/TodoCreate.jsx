@@ -10,7 +10,7 @@ const TodoCreate = () => {
 
     const submit = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://localhost:4000/api/v1/createTodo', {
+        const response = await fetch(`${process.env.BASE_URL}/createTodo`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
