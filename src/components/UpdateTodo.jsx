@@ -12,7 +12,7 @@ const UpdateTodo = () => {
 
     const submit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`${process.env.BASE_URL}/updateTodo/${id}`, {
+        const response = await fetch(`https://todoapp-p93i.onrender.com/api/v1/updateTodo/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ const UpdateTodo = () => {
       
       const getOneData = async () => {
         // console.log(id);
-        const response = await fetch(`${process.env.BASE_URL}/getOneTodo/${id}`);
+        const response = await fetch(`https://todoapp-p93i.onrender.com/api/v1/getOneTodo/${id}`);
         const result = await response.json();
         if(response.ok) {
             setTitle(result.title);
