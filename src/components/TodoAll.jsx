@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Todo from './Todo';
+import toast from 'react-hot-toast';
 
 const TodoAll = () => {
     const [data, setData] = useState([]);
@@ -31,7 +32,7 @@ const TodoAll = () => {
         const response = await fetch(`https://todoapp-p93i.onrender.com/api/v1/deleteTodo/${id}`,{
             method: 'DELETE',
         })
-
+        toast.success("Todo deleted successfully");
         if(!response.ok) {
             setError(response.error);
         }

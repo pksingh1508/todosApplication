@@ -31,7 +31,7 @@ const TodoCreate = () => {
       }
 
   return (
-    <div className='w-[100vw] h-[100vh] bg-slate-200 flex items-center justify-center text-center'>
+    <div className='w-[100vw] h-[90vh] flex pt-12  text-center'>
         <form onSubmit={submit} className='w-[100vw] flex flex-col items-center'>
         {
             error &&
@@ -40,14 +40,14 @@ const TodoCreate = () => {
             </div>
         }
         <div className='text-center text-xl lg:text-4xl font-bold mb-9'>Create Todos</div>
-        <div className='sm:w-[350px] lg:w-[500px] w-[240px] flex flex-col bg-slate-400 p-4 rounded-xl mb-2'>
-          <label htmlFor="title" className='text-xl text-slate-800 py-2 font-bold'>Title</label>
+        <div className='sm:w-[350px] lg:w-[500px] w-[320px] flex flex-col bg-slate-400 p-4 rounded-xl mb-2'>
+          <label htmlFor="title" className='text-xl text-slate-800 py-2 font-bold uppercase'>Date || Day</label>
           <input type="text" id='title' placeholder='Enter Title...' onChange={(e) => (setTitle(e.target.value))}
             className='rounded-xl px-2 py-2 text-lg font-bold'
           />
         </div>
-        <div className='sm:w-[350px] lg:w-[500px] w-[240px] flex flex-col bg-slate-400 p-4 rounded-xl mt-2'>
-          <label htmlFor="desc" className='text-xl text-slate-800 py-2 font-bold'>Description</label>
+        <div className='sm:w-[350px] lg:w-[500px] w-[320px] flex flex-col bg-slate-400 p-4 rounded-xl mt-2'>
+          <label htmlFor="desc" className='text-xl text-slate-800 py-2 font-bold uppercase'>Todo</label>
           <input type="text" id='desc' placeholder='Enter Todo...' onChange={(e) => (setDescription(e.target.value))}
             className='rounded-xl px-2 py-2 text-lg font-bold'
           />
